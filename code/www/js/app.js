@@ -1,5 +1,8 @@
-angular.module('songlify', ['ionic', 'songlify.controllers', 'ionic.contrib.ui.tinderCards', 'azure-mobile-service.module'])
-    .constant('AzureMobileServiceClient',{ API_URL: "https://songlifyapi.azure-mobile.net/", API_KEY: 'PETFiubpAkwVGEHIFJnFSVqEgJywPm42'})
+
+angular.module('songlify', ['ionic', 'songlify.controllers',
+  'ionic.contrib.ui.tinderCards', 'azure-mobile-service.module'])
+    .constant('AzureMobileServiceClient',
+    { API_URL: "https://songlifyapi.azure-mobile.net/", API_KEY: 'PETFiubpAkwVGEHIFJnFSVqEgJywPm42'})
 
 .run(function($ionicPlatform) {
   $ionicPlatform.ready(function() {
