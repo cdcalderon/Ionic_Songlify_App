@@ -1,7 +1,8 @@
 /**
  * Created by carlos on 5/9/2015.
  */
-angular.module('songlify.controllers').controller('SongListCtrl', function($scope, $timeout, User, Suggestions, $ionicLoading) {
+angular.module('songlify.controllers').controller('SongListCtrl',
+    function($scope, $timeout, User, Suggestions, $ionicLoading) {
     var showLoading = function(){
         $ionicLoading.show({
             template: '<i class="ion-loading-c" ></i>',

@@ -4,7 +4,8 @@
 /*
  favorites page Ctrl
  */
-angular.module('songlify.controllers').controller('FavoritesCtrl', function($scope, User, $window) {
+angular.module('songlify.controllers')
+    .controller('FavoritesCtrl', function($scope, User, $window) {
     $scope.favorites = User.favorites;
     $scope.username = User.username;
 
@@ -15,4 +16,4 @@ angular.module('songlify.controllers').controller('FavoritesCtrl', function($sco
     $scope.openSong = function(song){
         $window.open(song.open_url, "_system");
     }
-})
+});
