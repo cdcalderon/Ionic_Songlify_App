@@ -1,0 +1,13 @@
+{
+  "title": "Songlify",
+  "url": "songlify-carlos -calderon",
+  "version": "v1.0",
+  "twitter": "cdcalderon1979",
+  "coverImage": "images/cover.jpg",
+  "description": "Sample Ionic App integrating Spotify APIs",
+  "git": "https://github.com/cdcalderon/Ionic_Songlify_App",
+
+  "author": {
+    "github": "cdcalderon"
+  }
+}

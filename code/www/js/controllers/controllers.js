@@ -1,0 +1,1 @@
+angular.module('songlify.controllers', ['ionic', 'songlify.services']);

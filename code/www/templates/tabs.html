@@ -1,0 +1,12 @@
+<ion-tabs class="tabs-icon-top tabs-color-active-positive">
+  <!-- SongList Tab -->
+  <ion-tab title="Song List" icon-off="ion-radio-waves" icon-on="ion-radio-waves" href="#/tab/songList">
+    <ion-nav-view name="tab-songList"></ion-nav-view>
+  </ion-tab>
+
+  <!-- Favorites Tab -->
+  <ion-tab title="Favorites" icon-off="ion-music-note" icon-on="ion-music-note" href="#/tab/favorites"
+           on-select="enteringFavorites()" on-deselect="leavingFavorites()" badge="favoriteCount()" badge-style="badge-assertive">
+    <ion-nav-view name="tab-favorites"></ion-nav-view>
+  </ion-tab>
+</ion-tabs>

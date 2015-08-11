@@ -1,0 +1,47 @@
+<ion-view view-title="SongList" class="songList-page">
+  <ion-content scroll="false">
+
+    <td-cards>
+      <td-card ng-repeat="recommendation in recommendations"
+               on-destroy="cardDestroyed($index)"
+               on-swipe-left="cardSwipedLeft($index)"
+               on-swipe-right="cardSwipedRight($index)"
+               on-swipe="cardSwiped($index)">
+
+
+        <div class="list card current-song" ng-class="{skipped: playingSong.rated == false,
+                                                   favorited: playingSong.rated == true}"
+             ng-show="playingSong && !playingSong.hide">
+
+          <div class="item item-image">
+            <img ng-src="{{playingSong.imageLarge}}">
+          </div>
+
+          <div class="item">
+            <h2>{{playingSong.title}}  <span ng-hide="playingSong.loaded"><i class="ion-loading-c"></i></span>  </h2>
+            <p>{{playingSong.artist}}</p>
+          </div>
+
+          <div class="item tabs tabs-secondary tabs-icon-left">
+            <a class="tab-item" ng-click="processSelection(false)">
+              <i class="icon ion-close"></i>
+              Skip
+            </a>
+            <a class="tab-item" ng-click="processSelection(true)">
+              <i class="icon ion-heart"></i>
+              Favorite
+            </a>
+          </div>
+
+        </div>
+
+      </td-card>
+    </td-cards>
+
+    <div class="prefeched-image">
+      <img ng-src="{{nextAlbumImg()}}"/>
+    </div>
+
+
+  </ion-content>
+</ion-view>
